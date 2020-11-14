@@ -1,0 +1,15 @@
+[package]
+name = "primary"
+version = "0.1.0"
+authors = ["enrico <enrico@cora.com.br>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.41"
+actix-web = "3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+domain = { version = "0.1.0", path="../domain"}
+futures = { version = "0.3.*" }

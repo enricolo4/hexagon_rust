@@ -286,6 +286,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "anymap"
+version = "0.12.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "33954243bd79057c2de7338850b85983a44588021f8a5fee574a8888c6de4344"
+
+[[package]]
 name = "async-trait"
 version = "0.1.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -508,6 +514,9 @@ checksum = "212d0f5754cb6769937f4501cc0e67f4f4483c8d2c3e1e922ee9edbe4ab4c7c0"
 [[package]]
 name = "domain"
 version = "0.1.0"
+dependencies = [
+ "shaku",
+]
 
 [[package]]
 name = "dtoa"
@@ -755,12 +764,15 @@ dependencies = [
 name = "hexagon_rust"
 version = "0.1.0"
 dependencies = [
+ "actix-rt",
  "actix-web",
  "domain",
  "futures",
+ "lazy_static",
  "once_cell",
  "primary",
  "secondary",
+ "shaku",
 ]
 
 [[package]]
@@ -1124,6 +1136,7 @@ dependencies = [
  "futures",
  "serde",
  "serde_json",
+ "shaku",
 ]
 
 [[package]]
@@ -1269,6 +1282,7 @@ name = "secondary"
 version = "0.1.0"
 dependencies = [
  "domain",
+ "shaku",
  "uuid",
 ]
 
@@ -1348,6 +1362,27 @@ name = "sha1"
 version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2579985fda508104f7587689507983eadd6a6e84dd35d6d115361f530916fa0d"
+
+[[package]]
+name = "shaku"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "86130b93cbaa624dda70cc28df0a3b2c25419ff43c08be87eca8e6fa1366466a"
+dependencies = [
+ "anymap",
+ "shaku_derive",
+]
+
+[[package]]
+name = "shaku_derive"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d970e8bea447a68911f163667dc527200cfcf6801d9f44a4b18f54518f440a21"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
 
 [[package]]
 name = "signal-hook-registry"

@@ -2,7 +2,6 @@ use domain::user::model::Person;
 use domain::user::port::secondary::UserRepositoryPort;
 use crate::mysql::user::dbo::PersonToDBO;
 
-#[derive(Clone, Copy)]
 pub struct UserRepositoryAdapter;
 
 impl UserRepositoryAdapter {

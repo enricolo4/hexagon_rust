@@ -13,3 +13,4 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 domain = { version = "0.1.0", path="../domain"}
 futures = { version = "0.3.*" }
+shaku = "0.5.0"

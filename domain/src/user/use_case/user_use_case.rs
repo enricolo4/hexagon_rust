@@ -1,13 +1,14 @@
 use crate::user::model::Person;
 use crate::user::port::primary::UserPort;
 use crate::user::port::secondary::UserRepositoryPort;
+use std::sync::Arc;
 
 pub struct UserUseCase {
-    adapter: Box<dyn UserRepositoryPort>
+    adapter: Arc<dyn UserRepositoryPort>
 }
 
 impl UserUseCase {
-    pub fn new(adapter: Box<dyn UserRepositoryPort>) -> Self {
+    pub fn new(adapter: Arc<dyn UserRepositoryPort>) -> Self {
         return Self { adapter };
     }
 }

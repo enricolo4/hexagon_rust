@@ -13,9 +13,9 @@ pub async fn server_start(
 ) -> std::io::Result<()> {
     HttpServer::new( move|| {
         App::new()
+            .route("/health", web::get().to(health))
             .data(user_controller.clone())
             .route("/person", web::post().to(UserController::save))
-            .route("/health", web::get().to(health))
             .data(test_controller.clone())
             .route("/test", web::post().to(TestController::save))
     }).bind("127.0.0.1:8080")?
